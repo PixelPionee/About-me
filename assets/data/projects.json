@@ -1,0 +1,63 @@
+{
+  "projects": [
+    {
+      "id": "ghost-of-tsushima",
+      "title": "Ghost of Tsushima — Interactive Experience",
+      "category": "UX Experimental",
+      "year": "2024",
+      "tagline": "Narrativa visual através de código e performance",
+      "thumbnail": "/assets/images/ghost-thumb.jpg",
+      "technologies": ["React", "Canvas API", "JavaScript"],
+      "metrics": {
+        "performance": "60fps constantes",
+        "scope": "Sistema de partículas + Animações ambientais"
+      },
+      "problem": "Como traduzir a atmosfera contemplativa de um jogo em uma experiência web interativa sem comprometer performance?",
+      "decision": "Priorizar fluidez visual sobre quantidade de efeitos. Cada partícula foi otimizada; animações desnecessárias foram cortadas.",
+      "cutFeatures": [
+        "Sistema de clima dinâmico (complexidade vs. valor)",
+        "Trilha sonora adaptativa (escopo técnico)",
+        "Modo noturno animado (performance)"
+      ],
+      "learnings": [
+        "Canvas API exige trade-offs conscientes entre visual e CPU",
+        "60fps não é negociável em experiências interativas",
+        "Menos efeitos bem executados > muitos efeitos medianos"
+      ],
+      "links": {
+        "live": "#",
+        "github": "https://github.com/PixelPionee"
+      }
+    },
+    {
+      "id": "manual-dos-monstros",
+      "title": "Manual de Campo do Caçador",
+      "category": "Arquitetura & Conteúdo",
+      "year": "2024",
+      "tagline": "Bestiário interativo com foco em leitura e SEO",
+      "thumbnail": "/assets/images/manual-thumb.jpg",
+      "technologies": ["Next.js", "SSG", "JSON", "TypeScript"],
+      "metrics": {
+        "architecture": "Separação total dados/interface",
+        "seo": "100% conteúdo estático indexável"
+      },
+      "problem": "Como criar um sistema de conteúdo escalável que priorize leitura, SEO e manutenibilidade?",
+      "decision": "Static Site Generation com dados em JSON. Cada criatura é uma página estática gerada em build time.",
+      "cutFeatures": [
+        "Sistema de busca client-side (adicionaria complexidade prematura)",
+        "Animações de entrada (distração da leitura)",
+        "Modo escuro (foco em MVP funcional)"
+      ],
+      "learnings": [
+        "SSG resolve 80% dos problemas de performance e SEO",
+        "Separar dados da UI facilita manutenção e testes",
+        "Arquitetura clara > features impressionantes"
+      ],
+      "links": {
+        "live": "#",
+        "github": "https://github.com/PixelPionee"
+      },
+      "status": "Em desenvolvimento"
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manual de Campo do Caçador — Case study de arquitetura front-end com foco em conteúdo, SEO e escalabilidade.">
+    <title>Manual de Campo do Caçador — Caio Finisguerra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+            <a href="../index.html" class="logo" aria-label="Página inicial">CF</a>
+            <ul class="nav-links">
+                <li><a href="../projects.html">Projetos</a></li>
+                <li><a href="../about.html">Sobre</a></li>
+                <li><a href="../philosophy.html">Processo</a></li>
+                <li><a href="../contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="project-detail">
+            <div class="container">
+                <header class="project-header">
+                    <div class="project-meta-info">
+                        <span class="project-category">Arquitetura & Conteúdo</span>
+                        <span class="project-year">2024</span>
+                        <span class="project-status">Em desenvolvimento</span>
+                    </div>
+                    <h1 class="project-title">Manual de Campo do Caçador</h1>
+                    <p class="project-tagline">Bestiário interativo com foco em leitura e SEO</p>
+                </header>
+
+                <figure class="project-hero-image">
+                    <img src="../assets/images/manual-hero.jpg" alt="Manual de Campo do Caçador" loading="eager">
+                    <figcaption>Sistema de conteúdo escalável para bestiário interativo</figcaption>
+                </figure>
+
+                <section class="project-section" aria-labelledby="overview-title">
+                    <h2 id="overview-title" class="section-title">Visão Geral</h2>
+                    <div class="content-block">
+                        <p>
+                            Projeto autoral de bestiário interativo focado em leitura, narrativa e 
+                            arquitetura estática. O objetivo é criar um sistema de conteúdo que priorize 
+                            SEO, performance e manutenibilidade, separando completamente dados da interface.
+                        </p>
+                        <p class="project-note">
+                            <strong>Status:</strong> Projeto em desenvolvimento ativo. A arquitetura base 
+                            está definida e implementada, com foco atual na criação de conteúdo e 
+                            refinamento da experiência de leitura.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="project-section" aria-labelledby="problem-title">
+                    <h2 id="problem-title" class="section-title">O Problema</h2>
+                    <div class="content-block">
+                        <p class="highlight-text">
+                            Como criar um sistema de conteúdo escalável que priorize leitura, 
+                            SEO e manutenibilidade?
+                        </p>
+                        <p>
+                            Bestiários e wikis de jogos frequentemente sofrem de problemas comuns:
+                        </p>
+                        <ul>
+                            <li>Conteúdo difícil de manter e atualizar</li>
+                            <li>SEO comprometido por renderização client-side</li>
+                            <li>Performance ruim devido a excesso de JavaScript</li>
+                            <li>Experiência de leitura prejudicada por distrações visuais</li>
+                        </ul>
+                        <p>
+                            O desafio era criar uma solução que resolvesse esses problemas mantendo 
+                            flexibilidade para crescimento futuro.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="project-section" aria-labelledby="decision-title">
+                    <h2 id="decision-title" class="section-title">A Decisão Principal</h2>
+                    <div class="content-block">
+                        <p>
+                            <strong>Static Site Generation com dados em JSON.</strong>
+                        </p>
+                        <p>
+                            Cada criatura é uma página estática gerada em build time. Isso garante:
+                        </p>
+                        <ul>
+                            <li>100% do conteúdo indexável por motores de busca</li>
+                            <li>Performance máxima (páginas pré-renderizadas)</li>
+                            <li>Separação clara entre dados e apresentação</li>
+                            <li>Facilidade de manutenção (editar JSON é mais simples que editar HTML)</li>
+                        </ul>
+                        <p>
+                            A escolha de Next.js com SSG foi estratégica: oferece as vantagens de um 
+                            framework moderno mantendo a simplicidade de sites estáticos.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="project-section" aria-labelledby="stack-title">
+                    <h2 id="stack-title" class="section-title">Stack Técnica</h2>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <h3>Next.js</h3>
+                            <p>Framework com suporte nativo a SSG e otimizações automáticas</p>
+                        </div>
+                        <div class="tech-item">
+                            <h3>TypeScript</h3>
+                            <p>Type safety para dados estruturados e prevenção de erros</p>
+                        </div>
+                        <div class="tech-item">
+                            <h3>JSON</h3>
+                            <p>Formato de dados simples e fácil de manter</p>
+                        </div>
+                    </div>
+                    
+                    <div class="content-block">
+                        <h3>Arquitetura de Dados</h3>
+                        <p>
+                            Cada criatura é definida em um arquivo JSON com estrutura padronizada:
+                        </p>
+                        <pre><code>{
+  "id": "criatura-exemplo",
+  "name": "Nome da Criatura",
+  "category": "Categoria",
+  "habitat": "Descrição do habitat",
+  "behavior": "Padrões de comportamento",
+  "weaknesses": ["Fraqueza 1", "Fraqueza 2"],
+  "lore": "História e contexto narrativo"
+}</code></pre>
+                        
+                        <h3>Métricas de Qualidade</h3>
+                        <ul>
+                            <li><strong>100% conteúdo estático indexável</strong> por motores de busca</li>
+                            <li><strong>Lighthouse Score 95+</strong> em todas as métricas</li>
+                            <li><strong>Separação total dados/interface</strong> para manutenibilidade</li>
+                            <li><strong>Type safety</strong> com TypeScript em toda a aplicação</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="project-section cut-features" aria-labelledby="cut-title">
+                    <h2 id="cut-title" class="section-title">O Que Foi Cortado (E Por Quê)</h2>
+                    <div class="content-block">
+                        <p>
+                            Decisões de escopo focadas em MVP funcional e qualidade de leitura:
+                        </p>
+                        
+                        <div class="cut-item">
+                            <h3>Sistema de Busca Client-Side</h3>
+                            <p>
+                                <strong>Motivo:</strong> Adicionaria complexidade prematura. Com poucas 
+                                criaturas inicialmente, navegação por categorias é suficiente. Busca pode 
+                                ser adicionada quando o conteúdo crescer.
+                            </p>
+                        </div>
+
+                        <div class="cut-item">
+                            <h3>Animações de Entrada</h3>
+                            <p>
+                                <strong>Motivo:</strong> Distração da leitura. O foco é conteúdo, não 
+                                efeitos visuais. Animações sutis podem ser adicionadas depois, mas nunca 
+                                devem competir com o texto.
+                            </p>
+                        </div>
+
+                        <div class="cut-item">
+                            <h3>Modo Escuro</h3>
+                            <p>
+                                <strong>Motivo:</strong> Foco em MVP funcional. Melhor ter um tema claro 
+                                bem executado que dois temas medianos. Modo escuro será implementado após 
+                                validação do design principal.
+                            </p>
+                        </div>
+
+                        <div class="cut-item">
+                            <h3>Sistema de Comentários</h3>
+                            <p>
+                                <strong>Motivo:</strong> Escopo e manutenção. Adicionar interatividade 
+                                social exigiria backend, moderação e complexidade de infraestrutura 
+                                desproporcional ao valor inicial.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-section" aria-labelledby="learnings-title">
+                    <h2 id="learnings-title" class="section-title">Aprendizados</h2>
+                    <div class="content-block">
+                        <ul class="learnings-list">
+                            <li>
+                                <strong>SSG resolve 80% dos problemas de performance e SEO:</strong> 
+                                Páginas estáticas são rápidas, indexáveis e fáceis de hospedar. 
+                                A complexidade de SPA só se justifica quando há necessidade real de 
+                                interatividade dinâmica.
+                            </li>
+                            <li>
+                                <strong>Separar dados da UI facilita manutenção e testes:</strong> 
+                                Editar conteúdo em JSON é mais simples e menos propenso a erros que 
+                                editar diretamente em componentes. Também permite validação automática 
+                                de estrutura.
+                            </li>
+                            <li>
+                                <strong>Arquitetura clara > features impressionantes:</strong> 
+                                Um sistema bem organizado que faz poucas coisas bem é mais valioso 
+                                que um sistema complexo com muitas features mal implementadas.
+                            </li>
+                            <li>
+                                <strong>TypeScript previne erros antes de acontecerem:</strong> 
+                                Type safety em dados estruturados evita bugs silenciosos e melhora 
+                                a experiência de desenvolvimento com autocomplete e validação.
+                            </li>
+                            <li>
+                                <strong>Conteúdo primeiro, features depois:</strong> 
+                                É melhor ter conteúdo de qualidade em uma interface simples que 
+                                uma interface complexa sem conteúdo. O valor está na informação, 
+                                não na tecnologia.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="project-section" aria-labelledby="next-title">
+                    <h2 id="next-title" class="section-title">Próximos Passos</h2>
+                    <div class="content-block">
+                        <p>Roadmap de desenvolvimento:</p>
+                        <ol>
+                            <li>Completar conteúdo inicial (10-15 criaturas)</li>
+                            <li>Implementar sistema de categorias e filtros</li>
+                            <li>Adicionar modo escuro após validação do design principal</li>
+                            <li>Otimizar imagens e implementar lazy loading avançado</li>
+                            <li>Considerar busca client-side quando conteúdo atingir massa crítica</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="project-links">
+                    <a href="#" class="project-link-button disabled" aria-disabled="true">
+                        Em Desenvolvimento
+                    </a>
+                    <a href="https://github.com/PixelPionee" class="project-link-button secondary" target="_blank" rel="noopener noreferrer">
+                        Ver Código no GitHub →
+                    </a>
+                </section>
+
+                <nav class="project-navigation" aria-label="Navegação entre projetos">
+                    <a href="ghost-of-tsushima.html" class="prev-project">
+                        ← Projeto Anterior: Ghost of Tsushima
+                    </a>
+                    <a href="../projects.html" class="back-link">Voltar para Projetos</a>
+                </nav>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-name">Caio Finisguerra</p>
+                    <p class="footer-location">Nova Odessa – SP, Brasil</p>
+                </div>
+                <nav class="footer-links" aria-label="Links de contato">
+                    <a href="https://github.com/PixelPionee" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/caio-finisguerra-2a7856265/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:caiofinis@gmail.com">Email</a>
+                </nav>
+            </div>
+            <p class="footer-copyright">
+                &copy; <span id="current-year"></span> Caio Finisguerra. Código e design próprios.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

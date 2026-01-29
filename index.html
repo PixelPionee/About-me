@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Caio Finisguerra — Desenvolvedor Front-End focado em experiências interativas, performance e interfaces com intenção.">
+    <meta name="author" content="Caio Finisguerra">
+    <meta property="og:title" content="Caio Finisguerra — Desenvolvedor Front-End">
+    <meta property="og:description" content="Transformo ideias em interfaces que não parecem genéricas — usando código, design e estratégia.">
+    <meta property="og:type" content="website">
+    <title>Caio Finisguerra — Desenvolvedor Front-End</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+            <a href="index.html" class="logo" aria-label="Página inicial">CF</a>
+            <ul class="nav-links">
+                <li><a href="projects.html">Projetos</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="philosophy.html">Processo</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <h1 id="hero-title" class="hero-title">
+                    Desenvolvedor Front-End focado em experiências interativas, performance e interfaces com intenção.
+                </h1>
+                <p class="hero-subtitle">
+                    Transformo ideias em interfaces que não parecem genéricas — usando código, design e estratégia.
+                </p>
+                <a href="projects.html" class="cta-button" aria-label="Ver meus projetos">
+                    Ver Projetos
+                </a>
+            </div>
+        </section>
+
+        <section class="trust-anchor" aria-labelledby="trust-title">
+            <div class="container">
+                <h2 id="trust-title" class="section-title">Como Trabalho</h2>
+                <ul class="trust-list">
+                    <li class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">✓</span>
+                        <div class="trust-content">
+                            <h3>Entrega com escopo fechado</h3>
+                            <p>Defino limites claros antes de começar</p>
+                        </div>
+                    </li>
+                    <li class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">✓</span>
+                        <div class="trust-content">
+                            <h3>Código legível e versionado</h3>
+                            <p>Git desde o primeiro commit</p>
+                        </div>
+                    </li>
+                    <li class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">✓</span>
+                        <div class="trust-content">
+                            <h3>Decisões documentadas</h3>
+                            <p>Cada escolha técnica tem justificativa</p>
+                        </div>
+                    </li>
+                    <li class="trust-item">
+                        <span class="trust-icon" aria-hidden="true">✓</span>
+                        <div class="trust-content">
+                            <h3>Performance medida</h3>
+                            <p>Lighthouse, não achismos</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="featured-projects" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title" class="section-title">Projetos em Destaque</h2>
+                <div class="projects-grid" id="projects-container"></div>
+            </div>
+        </section>
+
+        <section class="about-tools" aria-labelledby="tools-title">
+            <div class="container">
+                <h2 id="tools-title" class="section-title">Sobre Ferramentas</h2>
+                <p class="tools-statement">
+                    Utilizo IA como ferramenta de aceleração e revisão, mantendo total responsabilidade sobre decisões técnicas e qualidade final do código.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-name">Caio Finisguerra</p>
+                    <p class="footer-location">Nova Odessa – SP, Brasil</p>
+                </div>
+                <nav class="footer-links" aria-label="Links de contato">
+                    <a href="https://github.com/PixelPionee" target="_blank" rel="noopener noreferrer" aria-label="GitHub (abre em nova aba)">GitHub</a>
+                    <a href="https://www.linkedin.com/in/caio-finisguerra-2a7856265/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (abre em nova aba)">LinkedIn</a>
+                    <a href="mailto:caiofinis@gmail.com" aria-label="Enviar email">Email</a>
+                </nav>
+            </div>
+            <p class="footer-copyright">
+                &copy; <span id="current-year"></span> Caio Finisguerra. Código e design próprios.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/loader.js"></script>
+</body>
+</html>

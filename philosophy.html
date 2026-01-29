@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Processo de trabalho de Caio Finisguerra — Como abordo desenvolvimento front-end com foco em decisões conscientes.">
+    <title>Processo — Caio Finisguerra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+            <a href="index.html" class="logo" aria-label="Página inicial">CF</a>
+            <ul class="nav-links">
+                <li><a href="projects.html">Projetos</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="philosophy.html">Processo</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="philosophy-page">
+            <div class="container">
+                <header class="page-header">
+                    <h1 class="page-title">Processo</h1>
+                    <p class="lead">
+                        Como abordo desenvolvimento front-end: decisões conscientes, 
+                        escopo fechado e entrega com qualidade.
+                    </p>
+                </header>
+
+                <section class="philosophy-section" aria-labelledby="principles-title">
+                    <h2 id="principles-title" class="section-title">Princípios Fundamentais</h2>
+                    
+                    <div class="principle-block">
+                        <h3>1. Escopo Fechado Antes de Código</h3>
+                        <p>
+                            Não começo a escrever código sem entender o problema e definir limites claros. 
+                            Isso significa:
+                        </p>
+                        <ul>
+                            <li>Identificar o problema central que precisa ser resolvido</li>
+                            <li>Definir o que está dentro e fora do escopo</li>
+                            <li>Estabelecer critérios de sucesso mensuráveis</li>
+                            <li>Documentar decisões antes de implementar</li>
+                        </ul>
+                    </div>
+
+                    <div class="principle-block">
+                        <h3>2. Performance é Requisito, Não Feature</h3>
+                        <p>
+                            Performance não é algo que "adiciono depois". É parte do processo desde o início:
+                        </p>
+                        <ul>
+                            <li>Lighthouse rodando em cada etapa importante</li>
+                            <li>Animações testadas para manter 60fps</li>
+                            <li>Lazy loading e otimização de assets por padrão</li>
+                            <li>Core Web Vitals como métrica de qualidade</li>
+                        </ul>
+                    </div>
+
+                    <div class="principle-block">
+                        <h3>3. Código Legível > Código "Inteligente"</h3>
+                        <p>
+                            Priorizo clareza sobre demonstração de técnica. Um código que outro desenvolvedor 
+                            (ou eu mesmo em 6 meses) consegue entender rapidamente é mais valioso que 
+                            uma solução "elegante" mas obscura.
+                        </p>
+                        <ul>
+                            <li>Nomes de variáveis e funções descritivos</li>
+                            <li>Comentários explicando o "porquê", não o "o quê"</li>
+                            <li>Estrutura de pastas que comunica intenção</li>
+                            <li>Commits semânticos e descritivos</li>
+                        </ul>
+                    </div>
+
+                    <div class="principle-block">
+                        <h3>4. Cortar é Tão Importante Quanto Adicionar</h3>
+                        <p>
+                            A habilidade de dizer "não" a features é crucial. Em cada projeto, 
+                            documento explicitamente o que foi cortado e por quê:
+                        </p>
+                        <ul>
+                            <li>Features que adicionariam complexidade sem valor proporcional</li>
+                            <li>Otimizações prematuras que atrasariam entrega</li>
+                            <li>Efeitos visuais que comprometeriam performance</li>
+                            <li>Funcionalidades que podem ser adicionadas em iterações futuras</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="philosophy-section" aria-labelledby="workflow-title">
+                    <h2 id="workflow-title" class="section-title">Fluxo de Trabalho</h2>
+                    
+                    <ol class="workflow-steps">
+                        <li class="workflow-step">
+                            <h3>Entendimento</h3>
+                            <p>
+                                Analiso o problema, pesquiso referências, identifico requisitos técnicos 
+                                e não-técnicos. Faço perguntas antes de assumir.
+                            </p>
+                        </li>
+                        <li class="workflow-step">
+                            <h3>Planejamento</h3>
+                            <p>
+                                Defino arquitetura, escolho stack com justificativa, estabeleço escopo 
+                                e crio checklist de entrega. Documento decisões importantes.
+                            </p>
+                        </li>
+                        <li class="workflow-step">
+                            <h3>Implementação</h3>
+                            <p>
+                                Código incremental com commits frequentes. Testo em cada etapa. 
+                                Mantenho código limpo e organizado desde o início.
+                            </p>
+                        </li>
+                        <li class="workflow-step">
+                            <h3>Validação</h3>
+                            <p>
+                                Testo em diferentes dispositivos e navegadores. Rodo Lighthouse. 
+                                Verifico acessibilidade básica. Reviso código antes de considerar "pronto".
+                            </p>
+                        </li>
+                        <li class="workflow-step">
+                            <h3>Documentação</h3>
+                            <p>
+                                README claro, comentários onde necessário, decisões técnicas documentadas. 
+                                O projeto deve ser compreensível sem minha presença.
+                            </p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="philosophy-section" aria-labelledby="tools-title">
+                    <h2 id="tools-title" class="section-title">Filosofia de Stack</h2>
+                    
+                    <div class="content-block">
+                        <p>
+                            Escolho ferramentas baseado no problema, não em hype. Algumas diretrizes:
+                        </p>
+                        
+                        <div class="philosophy-grid">
+                            <div class="philosophy-item">
+                                <h3>Vanilla First</h3>
+                                <p>
+                                    Se posso resolver com HTML/CSS/JS puro, não adiciono dependências. 
+                                    Frameworks são ferramentas, não requisitos.
+                                </p>
+                            </div>
+                            <div class="philosophy-item">
+                                <h3>Progressive Enhancement</h3>
+                                <p>
+                                    Funcionalidade básica funciona sem JavaScript. 
+                                    Melhorias progressivas adicionam experiência, não dependência.
+                                </p>
+                            </div>
+                            <div class="philosophy-item">
+                                <h3>Performance Budget</h3>
+                                <p>
+                                    Cada biblioteca adicionada tem custo. Avalio se o benefício 
+                                    justifica o peso no bundle final.
+                                </p>
+                            </div>
+                            <div class="philosophy-item">
+                                <h3>Acessibilidade Desde o Início</h3>
+                                <p>
+                                    HTML semântico, ARIA quando necessário, navegação por teclado, 
+                                    contraste adequado. Não é "extra", é padrão.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="philosophy-section" aria-labelledby="learning-title">
+                    <h2 id="learning-title" class="section-title">Aprendizado Contínuo</h2>
+                    
+                    <div class="content-block">
+                        <p>
+                            Cada projeto é uma oportunidade de aprender. Mantenho um processo de 
+                            retrospectiva pessoal:
+                        </p>
+                        <ul>
+                            <li>O que funcionou bem e por quê?</li>
+                            <li>Quais decisões eu mudaria com o conhecimento atual?</li>
+                            <li>Que padrões ou técnicas novas aprendi?</li>
+                            <li>Como posso aplicar esses aprendizados no próximo projeto?</li>
+                        </ul>
+                        <p>
+                            Essa reflexão está documentada em cada case study que apresento.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="philosophy-cta">
+                    <p>Quer ver esses princípios aplicados na prática?</p>
+                    <a href="projects.html" class="cta-button">Ver Projetos</a>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-name">Caio Finisguerra</p>
+                    <p class="footer-location">Nova Odessa – SP, Brasil</p>
+                </div>
+                <nav class="footer-links" aria-label="Links de contato">
+                    <a href="https://github.com/PixelPionee" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/caio-finisguerra-2a7856265/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:caiofinis@gmail.com">Email</a>
+                </nav>
+            </div>
+            <p class="footer-copyright">
+                &copy; <span id="current-year"></span> Caio Finisguerra. Código e design próprios.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
