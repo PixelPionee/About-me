@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Battlefield Archive — Experimento de interface espacial 3D na web com Three.js e React.">
+    <title>Battlefield Archive — Caio Finisguerra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+            <a href="../index.html" class="logo" aria-label="Página inicial">CF</a>
+            <ul class="nav-links">
+                <li><a href="../projects.html">Projetos</a></li>
+                <li><a href="../about.html">Sobre</a></li>
+                <li><a href="../philosophy.html">Processo</a></li>
+                <li><a href="../contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="project-detail">
+            <div class="container">
+                <header class="project-header">
+                    <div class="project-meta-info">
+                        <span class="project-category">Experimento 3D</span>
+                        <span class="project-year">2025</span>
+                    </div>
+                    <h1 class="project-title">Battlefield Archive</h1>
+                    <p class="project-tagline">Exploração de interfaces espaciais na web</p>
+                </header>
+
+                <figure class="project-hero-image">
+                    <img src="../assets/images/battlefield-hero.jpg" alt="Battlefield Archive - Interface 3D" loading="eager">
+                    <figcaption>Navegação espacial 3D com Three.js e React</figcaption>
+                </figure>
+
+                <section class="project-section" aria-labelledby="overview-title">
+                    <h2 id="overview-title" class="section-title">Visão Geral</h2>
+                    <div class="content-block">
+                        <p>
+                            Battlefield Archive é uma aplicação web que reimagina a navegação de conteúdo 
+                            através de uma interface espacial 3D. O projeto explora a manipulação de objetos 
+                            tridimensionais no navegador, criando uma experiência de arquivo interativo que 
+                            foge do padrão bidimensional tradicional.
+                        </p>
+                        <p>
+                            Desenvolvido como estudo técnico sobre renderização 3D na web e gerenciamento 
+                            de estado em aplicações React complexas.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="project-section" aria-labelledby="problem-title">
+                    <h2 id="problem-title" class="section-title">O Desafio</h2>
+                    <div class="content-block">
+                        <p class="highlight-text">
+                            Como criar uma navegação 3D performática no navegador que permita interação 
+                            fluida com múltiplos objetos, mantendo 60fps?
+                        </p>
+                        <p>
+                            O objetivo técnico era implementar um sistema de raycasting eficiente para 
+                            detecção de hover/click em objetos 3D, sincronizado com um sistema de estado 
+                            React complexo, tudo isso mantendo performance em dispositivos de médio desempenho.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="project-section" aria-labelledby="decision-title">
+                    <h2 id="decision-title" class="section-title">A Solução</h2>
+                    <div class="content-block">
+                        <p>
+                            <strong>React Three Fiber + Arquitetura Desacoplada</strong>
+                        </p>
+                        <p>
+                            Utilizei React Three Fiber como renderer para Three.js, permitindo trabalhar 
+                            com 3D de forma declarativa. A arquitetura foi refatorada para separar claramente 
+                            as responsabilidades:
+                        </p>
+                        <ul>
+                            <li><strong>Otimização de Renders:</strong> React.memo e useMemo reduziram re-renders em ~70%</li>
+                            <li><strong>Sistema de Iluminação Seletivo:</strong> Layers do Three.js para sombras apenas em objetos específicos</li>
+                            <li><strong>Separação de Concerns:</strong> Hook customizado (useGameData) desacoplou lógica de dados da renderização</li>
+                            <li><strong>Lazy Loading:</strong> Carregamento assíncrono com Suspense boundaries</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="project-section" aria-labelledby="stack-title">
+                    <h2 id="stack-title" class="section-title">Stack Técnica</h2>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <h3>React 19.1.1</h3>
+                            <p>Biblioteca UI com hooks modernos</p>
+                        </div>
+                        <div class="tech-item">
+                            <h3>TypeScript 5.9.3</h3>
+                            <p>Tipagem estática e segurança</p>
+                        </div>
+                        <div class="tech-item">
+                            <h3>Three.js 0.182.0</h3>
+                            <p>Engine 3D para renderização WebGL</p>
+                        </div>
+                        <div class="tech-item">
+                            <h3>React Three Fiber</h3>
+                            <p>React renderer para Three.js</p>
+                        </div>
+                        <div class="tech-item">
+                            <h3>Vite 7.1.12</h3>
+                            <p>Build tool e dev server rápido</p>
+                        </div>
+                        <div class="tech-item">
+                            <h3>GSAP 3.14.2</h3>
+                            <p>Animações complexas</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-section cut-features" aria-labelledby="error-title">
+                    <h2 id="error-title" class="section-title">O Erro (O que deu errado)</h2>
+                    <div class="content-block">
+                        <p>
+                            Inicialmente, implementei a cena 3D com todos os componentes renderizando em 
+                            cada frame, sem otimização de re-renders. Isso causou quedas de performance 
+                            significativas quando múltiplas pastas estavam sendo animadas simultaneamente.
+                        </p>
+                        
+                        <div class="cut-item">
+                            <h3>Problema de Performance</h3>
+                            <p>
+                                <strong>Erro:</strong> Sistema de iluminação calculando sombras para todos 
+                                os objetos indiscriminadamente, gerando overhead desnecessário.
+                            </p>
+                            <p>
+                                <strong>Correção:</strong> Implementei layers do Three.js para iluminação 
+                                seletiva, reduzindo drasticamente o custo computacional.
+                            </p>
+                        </div>
+
+                        <div class="cut-item">
+                            <h3>Problema Arquitetural</h3>
+                            <p>
+                                <strong>Erro:</strong> Estado da pasta selecionada gerenciado dentro do 
+                                componente 3D, criando acoplamento entre renderização e lógica de negócio.
+                            </p>
+                            <p>
+                                <strong>Correção:</strong> Extraí o gerenciamento de estado para um hook 
+                                customizado, tornando o componente Scene puramente apresentacional.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-section" aria-labelledby="learnings-title">
+                    <h2 id="learnings-title" class="section-title">Aprendizados</h2>
+                    <div class="content-block">
+                        <ul class="learnings-list">
+                            <li>
+                                <strong>React.memo + useMemo são essenciais em cenas 3D:</strong> 
+                                Reduziram re-renders em aproximadamente 70%, mantendo 60fps.
+                            </li>
+                            <li>
+                                <strong>Three.js layers permitem otimizações cirúrgicas:</strong> 
+                                Iluminação seletiva economiza processamento sem comprometer visual.
+                            </li>
+                            <li>
+                                <strong>Separação de concerns é crítica em projetos 3D:</strong> 
+                                Scene puramente apresentacional + lógica em hooks = manutenibilidade.
+                            </li>
+                            <li>
+                                <strong>Web Workers seriam o próximo passo:</strong> 
+                                Para física/colisão em cenários com 10+ objetos interativos.
+                            </li>
+                            <li>
+                                <strong>Testes visuais são desafiadores mas necessários:</strong> 
+                                Playwright com visual regression testing seria adequado.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="project-section" aria-labelledby="future-title">
+                    <h2 id="future-title" class="section-title">O Que Faria Diferente Hoje</h2>
+                    <div class="content-block">
+                        <p>
+                            Hoje, implementaria uma arquitetura de componentes mais desacoplada para a 
+                            cena 3D, possivelmente utilizando um padrão de <strong>Entity-Component-System (ECS)</strong> 
+                            para gerenciar os objetos 3D. Isso facilitaria a adição de novos tipos de 
+                            objetos interativos sem modificar o código existente.
+                        </p>
+                        <p>
+                            Também utilizaria <strong>Web Workers</strong> para cálculos pesados de física/colisão, 
+                            mantendo o thread principal livre para renderização. A implementação atual 
+                            funciona bem para 5 objetos, mas não escalaria para cenários com dezenas de 
+                            elementos interativos.
+                        </p>
+                        <p>
+                            Por fim, implementaria <strong>testes de integração</strong> para o sistema de raycasting, 
+                            que atualmente depende de testes manuais.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="project-links">
+                    <a href="#" class="project-link-button" target="_blank" rel="noopener noreferrer">
+                        Ver Projeto Live →
+                    </a>
+                    <a href="https://github.com/PixelPionee" class="project-link-button secondary" target="_blank" rel="noopener noreferrer">
+                        Ver Código no GitHub →
+                    </a>
+                </section>
+
+                <nav class="project-navigation" aria-label="Navegação entre projetos">
+                    <a href="manual-dos-monstros.html" class="prev-project">
+                        ← Projeto Anterior: Manual de Campo
+                    </a>
+                    <a href="../projects.html" class="back-link">Voltar para Projetos</a>
+                </nav>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-name">Caio Finisguerra</p>
+                    <p class="footer-location">Nova Odessa – SP, Brasil</p>
+                </div>
+                <nav class="footer-links" aria-label="Links de contato">
+                    <a href="https://github.com/PixelPionee" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/caio-finisguerra-2a7856265/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:caiofinis@gmail.com">Email</a>
+                </nav>
+            </div>
+            <p class="footer-copyright">
+                &copy; <span id="current-year"></span> Caio Finisguerra. Código e design próprios.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

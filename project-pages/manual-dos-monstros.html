@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Manual de Campo do Caçador — Case study de arquitetura front-end com foco em conteúdo, SEO e escalabilidade.">
+    <meta name="description" content="Manual de Campo do Caçador — Bestiário digital baseado na lore literária de The Witcher de Andrzej Sapkowski.">
     <title>Manual de Campo do Caçador — Caio Finisguerra</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,30 +31,36 @@
                 <header class="project-header">
                     <div class="project-meta-info">
                         <span class="project-category">Arquitetura & Conteúdo</span>
-                        <span class="project-year">2024</span>
+                        <span class="project-year">2026</span>
                         <span class="project-status">Em desenvolvimento</span>
                     </div>
                     <h1 class="project-title">Manual de Campo do Caçador</h1>
-                    <p class="project-tagline">Bestiário interativo com foco em leitura e SEO</p>
+                    <p class="project-tagline">Bestiário digital imersivo baseado na lore literária de The Witcher</p>
                 </header>
 
                 <figure class="project-hero-image">
                     <img src="../assets/images/manual-hero.jpg" alt="Manual de Campo do Caçador" loading="eager">
-                    <figcaption>Sistema de conteúdo escalável para bestiário interativo</figcaption>
+                    <figcaption>Manual de campo científico/naturalista de criaturas sobrenaturais</figcaption>
                 </figure>
 
-                <section class="project-section" aria-labelledby="overview-title">
-                    <h2 id="overview-title" class="section-title">Visão Geral</h2>
+                <section class="project-section" aria-labelledby="concept-title">
+                    <h2 id="concept-title" class="section-title">Conceito</h2>
                     <div class="content-block">
                         <p>
-                            Projeto autoral de bestiário interativo focado em leitura, narrativa e 
-                            arquitetura estática. O objetivo é criar um sistema de conteúdo que priorize 
-                            SEO, performance e manutenibilidade, separando completamente dados da interface.
+                            Este projeto é um <strong>manual de campo científico/naturalista</strong> que documenta 
+                            criaturas sobrenaturais com:
                         </p>
-                        <p class="project-note">
-                            <strong>Status:</strong> Projeto em desenvolvimento ativo. A arquitetura base 
-                            está definida e implementada, com foco atual na criação de conteúdo e 
-                            refinamento da experiência de leitura.
+                        <ul>
+                            <li>✅ Descrições fiéis aos livros de Andrzej Sapkowski</li>
+                            <li>✅ Mitologias originais (Eslava, Persa, Celta) quando o livro não detalha</li>
+                            <li>✅ Biologia realista e plausível</li>
+                            <li>✅ Estética de manual de campo envelhecido</li>
+                        </ul>
+                        <p class="highlight-text">
+                            ⚠️ REGRA DE OURO: Ignorar completamente a estética dos jogos da CD Projekt RED
+                        </p>
+                        <p>
+                            Este bestiário segue APENAS as descrições literárias, não as interpretações visuais dos jogos.
                         </p>
                     </div>
                 </section>
@@ -63,21 +69,21 @@
                     <h2 id="problem-title" class="section-title">O Problema</h2>
                     <div class="content-block">
                         <p class="highlight-text">
-                            Como criar um sistema de conteúdo escalável que priorize leitura, 
-                            SEO e manutenibilidade?
+                            Como criar um bestiário que seja fiel à lore literária (não aos jogos), 
+                            com biologia realista e estética de manual de campo científico?
                         </p>
                         <p>
-                            Bestiários e wikis de jogos frequentemente sofrem de problemas comuns:
+                            Bestiários de The Witcher frequentemente sofrem de problemas comuns:
                         </p>
                         <ul>
-                            <li>Conteúdo difícil de manter e atualizar</li>
-                            <li>SEO comprometido por renderização client-side</li>
-                            <li>Performance ruim devido a excesso de JavaScript</li>
-                            <li>Experiência de leitura prejudicada por distrações visuais</li>
+                            <li>Dependência excessiva da estética dos jogos (não dos livros)</li>
+                            <li>Falta de fidelidade às descrições literárias de Sapkowski</li>
+                            <li>Ausência de contexto mitológico real (Eslavo, Persa, Celta)</li>
+                            <li>Biologia implausível ou inconsistente</li>
                         </ul>
                         <p>
-                            O desafio era criar uma solução que resolvesse esses problemas mantendo 
-                            flexibilidade para crescimento futuro.
+                            O desafio era criar uma solução que priorizasse a lore literária original, 
+                            mantendo rigor científico e estética de manual naturalista.
                         </p>
                     </div>
                 </section>
@@ -86,21 +92,18 @@
                     <h2 id="decision-title" class="section-title">A Decisão Principal</h2>
                     <div class="content-block">
                         <p>
-                            <strong>Static Site Generation com dados em JSON.</strong>
+                            <strong>SSG com Next.js 14 + Dados em JSON Local + Estética de Manual Envelhecido</strong>
                         </p>
                         <p>
-                            Cada criatura é uma página estática gerada em build time. Isso garante:
+                            Cada criatura é uma página estática gerada em build time, com dados estruturados 
+                            em JSON que separam completamente conteúdo da apresentação. Isso garante:
                         </p>
                         <ul>
                             <li>100% do conteúdo indexável por motores de busca</li>
                             <li>Performance máxima (páginas pré-renderizadas)</li>
-                            <li>Separação clara entre dados e apresentação</li>
+                            <li>Fidelidade literária (dados baseados nos livros de Sapkowski)</li>
                             <li>Facilidade de manutenção (editar JSON é mais simples que editar HTML)</li>
                         </ul>
-                        <p>
-                            A escolha de Next.js com SSG foi estratégica: oferece as vantagens de um 
-                            framework moderno mantendo a simplicidade de sites estáticos.
-                        </p>
                     </div>
                 </section>
 
@@ -108,38 +111,43 @@
                     <h2 id="stack-title" class="section-title">Stack Técnica</h2>
                     <div class="tech-stack">
                         <div class="tech-item">
-                            <h3>Next.js</h3>
-                            <p>Framework com suporte nativo a SSG e otimizações automáticas</p>
+                            <h3>Next.js 14+</h3>
+                            <p>App Router com SSG nativo</p>
                         </div>
                         <div class="tech-item">
                             <h3>TypeScript</h3>
-                            <p>Type safety para dados estruturados e prevenção de erros</p>
+                            <p>Type safety para dados estruturados</p>
                         </div>
                         <div class="tech-item">
-                            <h3>JSON</h3>
-                            <p>Formato de dados simples e fácil de manter</p>
+                            <h3>CSS Modules</h3>
+                            <p>Estilização sem Tailwind</p>
+                        </div>
+                        <div class="tech-item">
+                            <h3>JSON Local</h3>
+                            <p>Sem banco de dados</p>
                         </div>
                     </div>
                     
                     <div class="content-block">
-                        <h3>Arquitetura de Dados</h3>
+                        <h3>Estrutura de Dados</h3>
                         <p>
-                            Cada criatura é definida em um arquivo JSON com estrutura padronizada:
+                            Todas as criaturas estão em <code>data/bestiario.json</code> com a seguinte estrutura:
                         </p>
-                        <pre><code>{
-  "id": "criatura-exemplo",
-  "name": "Nome da Criatura",
-  "category": "Categoria",
-  "habitat": "Descrição do habitat",
-  "behavior": "Padrões de comportamento",
-  "weaknesses": ["Fraqueza 1", "Fraqueza 2"],
-  "lore": "História e contexto narrativo"
+                        <pre><code>interface Criatura {
+  id: string;
+  nome_comum: string;
+  classificacao: string;
+  ilustracao_src: string;
+  habitat: string;
+  comportamento: string;
+  nivel_ameaca: string;
+  observacoes_cacador: string;
 }</code></pre>
                         
                         <h3>Métricas de Qualidade</h3>
                         <ul>
                             <li><strong>100% conteúdo estático indexável</strong> por motores de busca</li>
-                            <li><strong>Lighthouse Score 95+</strong> em todas as métricas</li>
+                            <li><strong>Fidelidade literária</strong> às descrições de Sapkowski</li>
                             <li><strong>Separação total dados/interface</strong> para manutenibilidade</li>
                             <li><strong>Type safety</strong> com TypeScript em toda a aplicação</li>
                         </ul>
@@ -150,7 +158,7 @@
                     <h2 id="cut-title" class="section-title">O Que Foi Cortado (E Por Quê)</h2>
                     <div class="content-block">
                         <p>
-                            Decisões de escopo focadas em MVP funcional e qualidade de leitura:
+                            Decisões de escopo focadas em fidelidade literária e qualidade de leitura:
                         </p>
                         
                         <div class="cut-item">
@@ -165,8 +173,8 @@
                         <div class="cut-item">
                             <h3>Animações de Entrada</h3>
                             <p>
-                                <strong>Motivo:</strong> Distração da leitura. O foco é conteúdo, não 
-                                efeitos visuais. Animações sutis podem ser adicionadas depois, mas nunca 
+                                <strong>Motivo:</strong> Distração da leitura. O foco é conteúdo naturalista, 
+                                não efeitos visuais. Animações sutis podem ser adicionadas depois, mas nunca 
                                 devem competir com o texto.
                             </p>
                         </div>
@@ -174,9 +182,8 @@
                         <div class="cut-item">
                             <h3>Modo Escuro</h3>
                             <p>
-                                <strong>Motivo:</strong> Foco em MVP funcional. Melhor ter um tema claro 
-                                bem executado que dois temas medianos. Modo escuro será implementado após 
-                                validação do design principal.
+                                <strong>Motivo:</strong> Foco em tema único bem executado (papel envelhecido). 
+                                Melhor ter um tema que remete a manual antigo que dois temas medianos.
                             </p>
                         </div>
 
@@ -202,20 +209,14 @@
                                 interatividade dinâmica.
                             </li>
                             <li>
-                                <strong>Separar dados da UI facilita manutenção e testes:</strong> 
+                                <strong>Separar dados da UI facilita manutenção:</strong> 
                                 Editar conteúdo em JSON é mais simples e menos propenso a erros que 
                                 editar diretamente em componentes. Também permite validação automática 
                                 de estrutura.
                             </li>
                             <li>
-                                <strong>Arquitetura clara > features impressionantes:</strong> 
-                                Um sistema bem organizado que faz poucas coisas bem é mais valioso 
-                                que um sistema complexo com muitas features mal implementadas.
-                            </li>
-                            <li>
-                                <strong>TypeScript previne erros antes de acontecerem:</strong> 
-                                Type safety em dados estruturados evita bugs silenciosos e melhora 
-                                a experiência de desenvolvimento com autocomplete e validação.
+                                <strong>Fidelidade literária > interpretações visuais populares:</strong> 
+                                Seguir os livros de Sapkowski, não os jogos, cria um produto único e autêntico.
                             </li>
                             <li>
                                 <strong>Conteúdo primeiro, features depois:</strong> 
@@ -232,12 +233,16 @@
                     <div class="content-block">
                         <p>Roadmap de desenvolvimento:</p>
                         <ol>
-                            <li>Completar conteúdo inicial (10-15 criaturas)</li>
-                            <li>Implementar sistema de categorias e filtros</li>
-                            <li>Adicionar modo escuro após validação do design principal</li>
+                            <li>Completar conteúdo inicial baseado nos livros de Sapkowski</li>
+                            <li>Implementar sistema de categorias por mitologia (Eslava, Persa, Celta)</li>
+                            <li>Adicionar ilustrações naturalistas (não baseadas nos jogos)</li>
                             <li>Otimizar imagens e implementar lazy loading avançado</li>
                             <li>Considerar busca client-side quando conteúdo atingir massa crítica</li>
                         </ol>
+                        <p class="project-note">
+                            <strong>Nota:</strong> A estrutura do JSON está finalizada e não está sujeita a alterações. 
+                            O conteúdo textual será refinado conforme a pesquisa literária avança.
+                        </p>
                     </div>
                 </section>
 
@@ -254,7 +259,9 @@
                     <a href="ghost-of-tsushima.html" class="prev-project">
                         ← Projeto Anterior: Ghost of Tsushima
                     </a>
-                    <a href="../projects.html" class="back-link">Voltar para Projetos</a>
+                    <a href="battlefield-archive.html" class="next-project">
+                        Próximo Projeto: Battlefield Archive →
+                    </a>
                 </nav>
             </div>
         </article>

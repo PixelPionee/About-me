@@ -2,62 +2,98 @@
   "projects": [
     {
       "id": "ghost-of-tsushima",
-      "title": "Ghost of Tsushima — Interactive Experience",
+      "title": "Ghost of Tsushima — Interactive Tribute",
       "category": "UX Experimental",
-      "year": "2024",
-      "tagline": "Narrativa visual através de código e performance",
-      "thumbnail": "/assets/images/ghost-thumb.jpg",
-      "technologies": ["React", "Canvas API", "JavaScript"],
+      "year": "2025",
+      "tagline": "Cursor customizado com partículas físicas e performance otimizada",
+      "thumbnail": "assets/images/ghost-thumb.jpg",
+      "technologies": ["React", "TypeScript", "Canvas API", "GSAP", "Framer Motion"],
       "metrics": {
-        "performance": "60fps constantes",
-        "scope": "Sistema de partículas + Animações ambientais"
+        "performance": "60fps constantes com 100+ partículas",
+        "scope": "Cursor interativo + Sistema de partículas físicas"
       },
-      "problem": "Como traduzir a atmosfera contemplativa de um jogo em uma experiência web interativa sem comprometer performance?",
-      "decision": "Priorizar fluidez visual sobre quantidade de efeitos. Cada partícula foi otimizada; animações desnecessárias foram cortadas.",
+      "problem": "Como criar uma experiência web que capture a essência contemplativa de Ghost of Tsushima, onde o cursor seja protagonista, não apenas um ponteiro?",
+      "decision": "Transformar o cursor em vento. Flores de cerejeira e folhas de ginkgo seguem cada movimento do mouse com física realista, criando uma experiência que SENTE como o jogo.",
       "cutFeatures": [
-        "Sistema de clima dinâmico (complexidade vs. valor)",
-        "Trilha sonora adaptativa (escopo técnico)",
-        "Modo noturno animado (performance)"
+        "Sistema de Navegação Complexo (7 páginas → One-page scroll minimalista)",
+        "Ícones Geométricos nas Posturas (não ficou agradável visualmente)",
+        "Galeria Completa de Imagens (1 imagem impactante > galeria genérica)",
+        "Mapa Interativo de Tsushima (complexidade vs. valor)"
       ],
       "learnings": [
-        "Canvas API exige trade-offs conscientes entre visual e CPU",
-        "60fps não é negociável em experiências interativas",
-        "Menos efeitos bem executados > muitos efeitos medianos"
+        "Performance é UX: 30fps vs 60fps = diferença entre 'legal' e 'wow'",
+        "Object pooling essencial para partículas (evita garbage collection)",
+        "1 feature perfeita > 10 features medianas",
+        "Detalhes importam: throttle de 16ms, URL encoding, pequenas coisas = grande diferença"
       ],
       "links": {
         "live": "#",
         "github": "https://github.com/PixelPionee"
-      }
+      },
+      "status": "Em desenvolvimento - Sujeito a mudanças"
     },
     {
       "id": "manual-dos-monstros",
       "title": "Manual de Campo do Caçador",
       "category": "Arquitetura & Conteúdo",
-      "year": "2024",
-      "tagline": "Bestiário interativo com foco em leitura e SEO",
-      "thumbnail": "/assets/images/manual-thumb.jpg",
-      "technologies": ["Next.js", "SSG", "JSON", "TypeScript"],
+      "year": "2026",
+      "tagline": "Bestiário digital baseado na lore literária de The Witcher",
+      "thumbnail": "assets/images/manual-thumb.jpg",
+      "technologies": ["Next.js 14", "TypeScript", "SSG", "CSS Modules"],
       "metrics": {
-        "architecture": "Separação total dados/interface",
-        "seo": "100% conteúdo estático indexável"
+        "architecture": "Separação total dados/interface via JSON",
+        "seo": "100% conteúdo estático indexável",
+        "fidelidade": "Baseado exclusivamente nos livros de Sapkowski"
       },
-      "problem": "Como criar um sistema de conteúdo escalável que priorize leitura, SEO e manutenibilidade?",
-      "decision": "Static Site Generation com dados em JSON. Cada criatura é uma página estática gerada em build time.",
+      "problem": "Como criar um bestiário que seja fiel à lore literária (não aos jogos), com biologia realista e estética de manual de campo científico?",
+      "decision": "SSG com Next.js 14, dados em JSON local, estética de manual envelhecido. REGRA: Ignorar completamente a estética dos jogos da CD Projekt RED.",
       "cutFeatures": [
-        "Sistema de busca client-side (adicionaria complexidade prematura)",
+        "Sistema de busca client-side (complexidade prematura)",
         "Animações de entrada (distração da leitura)",
-        "Modo escuro (foco em MVP funcional)"
+        "Modo escuro (foco em tema único bem executado)",
+        "Sistema de comentários (escopo de backend desproporcional)"
       ],
       "learnings": [
         "SSG resolve 80% dos problemas de performance e SEO",
-        "Separar dados da UI facilita manutenção e testes",
-        "Arquitetura clara > features impressionantes"
+        "Separar dados da UI facilita manutenção (JSON → Interface)",
+        "Fidelidade literária > interpretações visuais populares",
+        "Conteúdo primeiro, features depois"
       ],
       "links": {
         "live": "#",
         "github": "https://github.com/PixelPionee"
       },
       "status": "Em desenvolvimento"
+    },
+    {
+      "id": "battlefield-archive",
+      "title": "Battlefield Archive",
+      "category": "Experimento 3D",
+      "year": "2025",
+      "tagline": "Exploração de interfaces espaciais na web",
+      "thumbnail": "assets/images/battlefield-thumb.jpg",
+      "technologies": ["React 19", "TypeScript", "Three.js", "React Three Fiber", "Vite"],
+      "metrics": {
+        "performance": "60fps em dispositivos médios",
+        "scope": "Navegação 3D + Raycasting + Sistema de estado complexo"
+      },
+      "problem": "Como criar uma navegação 3D performática no navegador que permita interação fluida com múltiplos objetos, mantendo 60fps?",
+      "decision": "React Three Fiber para renderização 3D, sistema de raycasting eficiente para detecção de hover/click, e separação clara entre lógica de renderização e estado.",
+      "cutFeatures": [
+        "Renderização de todos os componentes em cada frame (otimizado com React.memo)",
+        "Iluminação global com sombras (implementado sistema seletivo via layers)",
+        "Estado acoplado ao componente 3D (extraído para hook customizado)"
+      ],
+      "learnings": [
+        "React.memo + useMemo reduziram re-renders em ~70%",
+        "Three.js layers permitem iluminação seletiva eficiente",
+        "Separação de concerns: Scene puramente apresentacional, lógica em hooks",
+        "Web Workers seriam ideais para física/colisão em cenários com 10+ objetos"
+      ],
+      "links": {
+        "live": "#",
+        "github": "https://github.com/PixelPionee"
+      }
     }
   ]
 }
