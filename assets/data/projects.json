@@ -27,8 +27,8 @@
         "Detalhes importam: throttle de 16ms, URL encoding, pequenas coisas = grande diferença"
       ],
       "links": {
-        "live": "#",
-        "github": "https://github.com/PixelPionee"
+        "live": "https://pixelpionee.github.io/Ghost-of-Tsushima/",
+        "github": "https://github.com/PixelPionee/Ghost-of-Tsushima"
       },
       "status": "Em desenvolvimento - Sujeito a mudanças"
     },
@@ -60,7 +60,7 @@
         "Conteúdo primeiro, features depois"
       ],
       "links": {
-        "live": "#",
+        "live": "https://manual-dos-monstros-h10wnsxpu-caios-projects-a104c3b2.vercel.app/",
         "github": "https://github.com/PixelPionee"
       },
       "status": "Em desenvolvimento"
@@ -91,7 +91,7 @@
         "Web Workers seriam ideais para física/colisão em cenários com 10+ objetos"
       ],
       "links": {
-        "live": "#",
+        "live": "https://battlefiled.vercel.app/",
         "github": "https://github.com/PixelPionee"
       }
     }
