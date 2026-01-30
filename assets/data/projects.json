@@ -6,7 +6,7 @@
       "category": "UX Experimental",
       "year": "2025",
       "tagline": "Cursor customizado com partículas físicas e performance otimizada",
-      "thumbnail": "assets/images/ghost-thumb.jpg",
+      "thumbnail": "assets/images/ghost-of-tsushima/thumb.png",
       "technologies": ["React", "TypeScript", "Canvas API", "GSAP", "Framer Motion"],
       "metrics": {
         "performance": "60fps constantes com 100+ partículas",
@@ -38,7 +38,7 @@
       "category": "Arquitetura & Conteúdo",
       "year": "2026",
       "tagline": "Bestiário digital baseado na lore literária de The Witcher",
-      "thumbnail": "assets/images/manual-thumb.jpg",
+      "thumbnail": "assets/images/manual-dos-monstros/thumb.png",
       "technologies": ["Next.js 14", "TypeScript", "SSG", "CSS Modules"],
       "metrics": {
         "architecture": "Separação total dados/interface via JSON",
@@ -71,7 +71,7 @@
       "category": "Experimento 3D",
       "year": "2025",
       "tagline": "Exploração de interfaces espaciais na web",
-      "thumbnail": "assets/images/battlefield-thumb.jpg",
+      "thumbnail": "assets/images/battlefield-archive/thumb.png",
       "technologies": ["React 19", "TypeScript", "Three.js", "React Three Fiber", "Vite"],
       "metrics": {
         "performance": "60fps em dispositivos médios",
