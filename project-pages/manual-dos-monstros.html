@@ -155,44 +155,27 @@
                 </section>
 
                 <section class="project-section cut-features" aria-labelledby="cut-title">
-                    <h2 id="cut-title" class="section-title">O Que Foi Cortado (E Por Quê)</h2>
+                    <h2 id="cut-title" class="section-title">O Que Foi Cortado (Decisões de Escopo)</h2>
                     <div class="content-block">
                         <p>
-                            Decisões de escopo focadas em fidelidade literária e qualidade de leitura:
+                            Demonstração de pensamento estratégico através de trade-offs conscientes:
                         </p>
                         
                         <div class="cut-item">
-                            <h3>Sistema de Busca Client-Side</h3>
+                            <h3>Barra de Busca (Search Input)</h3>
                             <p>
-                                <strong>Motivo:</strong> Adicionaria complexidade prematura. Com poucas 
-                                criaturas inicialmente, navegação por categorias é suficiente. Busca pode 
-                                ser adicionada quando o conteúdo crescer.
+                                <strong>Planejado:</strong> Sistema de busca global com fuzzy search para filtrar criaturas<br>
+                                <strong>Implementado:</strong> Índice Visual e Filtros por Categoria (Abas)<br>
+                                <strong>Por quê:</strong> Para um MVP com 12 criaturas, a busca textual é overengineering. O índice visual é mais rápido e mantém a imersão de "folhear um livro", enquanto a busca faria parecer uma Wiki genérica.
                             </p>
                         </div>
 
                         <div class="cut-item">
-                            <h3>Animações de Entrada</h3>
+                            <h3>Modo Escuro (Dark Mode)</h3>
                             <p>
-                                <strong>Motivo:</strong> Distração da leitura. O foco é conteúdo naturalista, 
-                                não efeitos visuais. Animações sutis podem ser adicionadas depois, mas nunca 
-                                devem competir com o texto.
-                            </p>
-                        </div>
-
-                        <div class="cut-item">
-                            <h3>Modo Escuro</h3>
-                            <p>
-                                <strong>Motivo:</strong> Foco em tema único bem executado (papel envelhecido). 
-                                Melhor ter um tema que remete a manual antigo que dois temas medianos.
-                            </p>
-                        </div>
-
-                        <div class="cut-item">
-                            <h3>Sistema de Comentários</h3>
-                            <p>
-                                <strong>Motivo:</strong> Escopo e manutenção. Adicionar interatividade 
-                                social exigiria backend, moderação e complexidade de infraestrutura 
-                                desproporcional ao valor inicial.
+                                <strong>Planejado:</strong> Toggle de tema Claro/Escuro conforme preferência do sistema<br>
+                                <strong>Implementado:</strong> Tema Único (Papel Envelhecido)<br>
+                                <strong>Por quê:</strong> Decisão Artística e Técnica. O "Dark Mode" inverteria as cores do papel, quebrando a ilusão de que o site é um objeto físico antigo. A consistência atmosférica vale mais que a feature padrão.
                             </p>
                         </div>
                     </div>

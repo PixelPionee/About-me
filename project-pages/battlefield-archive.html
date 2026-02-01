@@ -123,36 +123,28 @@
                     </div>
                 </section>
 
-                <section class="project-section cut-features" aria-labelledby="error-title">
-                    <h2 id="error-title" class="section-title">O Erro (O que deu errado)</h2>
+                <section class="project-section cut-features" aria-labelledby="cut-title">
+                    <h2 id="cut-title" class="section-title">O Que Foi Cortado (Decisões de Escopo)</h2>
                     <div class="content-block">
                         <p>
-                            Inicialmente, implementei a cena 3D com todos os componentes renderizando em 
-                            cada frame, sem otimização de re-renders. Isso causou quedas de performance 
-                            significativas quando múltiplas pastas estavam sendo animadas simultaneamente.
+                            Demonstração de pensamento estratégico através de trade-offs conscientes:
                         </p>
                         
                         <div class="cut-item">
-                            <h3>Problema de Performance</h3>
+                            <h3>Suporte Mobile (Responsividade 3D)</h3>
                             <p>
-                                <strong>Erro:</strong> Sistema de iluminação calculando sombras para todos 
-                                os objetos indiscriminadamente, gerando overhead desnecessário.
-                            </p>
-                            <p>
-                                <strong>Correção:</strong> Implementei layers do Three.js para iluminação 
-                                seletiva, reduzindo drasticamente o custo computacional.
+                                <strong>Planejado:</strong> Controles de toque e câmera adaptativa para celulares<br>
+                                <strong>Implementado:</strong> Experiência otimizada exclusivamente para Desktop/Mouse<br>
+                                <strong>Por quê:</strong> Performance e Prazo. Renderizar cenas 3D com Raycasting no mobile exige otimizações extremas de bateria e GPU. Decidi garantir 60fps lisos no Desktop em vez de entregar uma experiência "travada" no mobile.
                             </p>
                         </div>
 
                         <div class="cut-item">
-                            <h3>Problema Arquitetural</h3>
+                            <h3>Física Realista (Cannon.js)</h3>
                             <p>
-                                <strong>Erro:</strong> Estado da pasta selecionada gerenciado dentro do 
-                                componente 3D, criando acoplamento entre renderização e lógica de negócio.
-                            </p>
-                            <p>
-                                <strong>Correção:</strong> Extraí o gerenciamento de estado para um hook 
-                                customizado, tornando o componente Scene puramente apresentacional.
+                                <strong>Planejado:</strong> Os arquivos teriam colisão e gravidade ao serem manipulados<br>
+                                <strong>Implementado:</strong> Animações baseadas em coordenadas (Lerp/Gsap)<br>
+                                <strong>Por quê:</strong> Complexidade Desnecessária. O objetivo é organizar arquivos, não criar um jogo. A física adicionaria peso ao bundle sem melhorar a usabilidade da organização.
                             </p>
                         </div>
                     </div>

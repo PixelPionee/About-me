@@ -15,10 +15,18 @@
       "problem": "Como criar uma experiência web que capture a essência contemplativa de Ghost of Tsushima, onde o cursor seja protagonista, não apenas um ponteiro?",
       "decision": "Transformar o cursor em vento. Flores de cerejeira e folhas de ginkgo seguem cada movimento do mouse com física realista, criando uma experiência que SENTE como o jogo.",
       "cutFeatures": [
-        "Sistema de Navegação Complexo (7 páginas → One-page scroll minimalista)",
-        "Ícones Geométricos nas Posturas (não ficou agradável visualmente)",
-        "Galeria Completa de Imagens (1 imagem impactante > galeria genérica)",
-        "Mapa Interativo de Tsushima (complexidade vs. valor)"
+        {
+          "feature": "Sistema de Navegação Complexo",
+          "planned": "7 páginas completas com rotas e transições via React Router",
+          "implemented": "Estrutura One-Page Scroll minimalista",
+          "reason": "Reduzir a fricção cognitiva. Menos cliques e loadings = mais imersão na narrativa do vento e das partículas"
+        },
+        {
+          "feature": "Mapa Interativo de Tsushima",
+          "planned": "Mapa explorável estilo 'Google Maps' com pontos de interesse (lore)",
+          "implemented": "Removido do escopo",
+          "reason": "Custo-Benefício. A complexidade de gerenciar o estado de um mapa vetorial desviaria o foco da mecânica principal (o cursor de vento). O cursor já entrega a interatividade necessária"
+        }
       ],
       "learnings": [
         "Performance é UX: 30fps vs 60fps = diferença entre 'legal' e 'wow'",
@@ -47,10 +55,18 @@
       "problem": "Como criar um bestiário que seja fiel à lore literária (não aos jogos), com biologia realista e estética de manual de campo científico?",
       "decision": "SSG com Next.js 14, dados em JSON local, estética de manual envelhecido. REGRA: Ignorar completamente a estética dos jogos da CD Projekt RED.",
       "cutFeatures": [
-        "Sistema de busca client-side (complexidade prematura)",
-        "Animações de entrada (distração da leitura)",
-        "Modo escuro (foco em tema único bem executado)",
-        "Sistema de comentários (escopo de backend desproporcional)"
+        {
+          "feature": "Barra de Busca (Search Input)",
+          "planned": "Sistema de busca global com fuzzy search para filtrar criaturas",
+          "implemented": "Índice Visual e Filtros por Categoria (Abas)",
+          "reason": "Para um MVP com 12 criaturas, a busca textual é overengineering. O índice visual é mais rápido e mantém a imersão de 'folhear um livro', enquanto a busca faria parecer uma Wiki genérica"
+        },
+        {
+          "feature": "Modo Escuro (Dark Mode)",
+          "planned": "Toggle de tema Claro/Escuro conforme preferência do sistema",
+          "implemented": "Tema Único (Papel Envelhecido)",
+          "reason": "Decisão Artística e Técnica. O 'Dark Mode' inverteria as cores do papel, quebrando a ilusão de que o site é um objeto físico antigo. A consistência atmosférica vale mais que a feature padrão"
+        }
       ],
       "learnings": [
         "SSG resolve 80% dos problemas de performance e SEO",
@@ -79,9 +95,18 @@
       "problem": "Como criar uma navegação 3D performática no navegador que permita interação fluida com múltiplos objetos, mantendo 60fps?",
       "decision": "React Three Fiber para renderização 3D, sistema de raycasting eficiente para detecção de hover/click, e separação clara entre lógica de renderização e estado.",
       "cutFeatures": [
-        "Renderização de todos os componentes em cada frame (otimizado com React.memo)",
-        "Iluminação global com sombras (implementado sistema seletivo via layers)",
-        "Estado acoplado ao componente 3D (extraído para hook customizado)"
+        {
+          "feature": "Suporte Mobile (Responsividade 3D)",
+          "planned": "Controles de toque e câmera adaptativa para celulares",
+          "implemented": "Experiência otimizada exclusivamente para Desktop/Mouse",
+          "reason": "Performance e Prazo. Renderizar cenas 3D com Raycasting no mobile exige otimizações extremas de bateria e GPU. Decidi garantir 60fps lisos no Desktop em vez de entregar uma experiência 'travada' no mobile"
+        },
+        {
+          "feature": "Física Realista (Cannon.js)",
+          "planned": "Os arquivos teriam colisão e gravidade ao serem manipulados",
+          "implemented": "Animações baseadas em coordenadas (Lerp/Gsap)",
+          "reason": "Complexidade Desnecessária. O objetivo é organizar arquivos, não criar um jogo. A física adicionaria peso ao bundle sem melhorar a usabilidade da organização"
+        }
       ],
       "learnings": [
         "React.memo + useMemo reduziram re-renders em ~70%",
