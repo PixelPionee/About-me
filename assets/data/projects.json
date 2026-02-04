@@ -75,10 +75,11 @@
         "Conteúdo primeiro, features depois"
       ],
       "links": {
-        "live": "https://manual-dos-monstros-h10wnsxpu-caios-projects-a104c3b2.vercel.app/",
+        "live": "https://manual-dos-monstros.vercel.app/",
         "github": "https://github.com/PixelPionee"
-      },
-      "status": "Em desenvolvimento"
+      }
+    
+      
     },
     {
       "id": "battlefield-archive",

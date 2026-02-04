@@ -101,15 +101,17 @@ main {
 }
 
 .cta-button:hover {
-    background-color: var(--color-hover);
+    background-color: var(--color-hover); 
+    color: var(--color-bg); 
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .cta-button.secondary {
-    background-color: transparent;
-    color: var(--color-accent);
-    border: 2px solid var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-bg) !important; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .cta-button.secondary:hover {
@@ -551,8 +553,10 @@ main {
 }
 
 .project-link-button:hover {
-    background-color: var(--color-hover);
+    background-color: var(--color-hover); 
+    color: var(--color-bg) !important;    
     transform: translateY(-2px);
+    text-decoration: none;
 }
 
 .project-link-button.secondary {
@@ -563,8 +567,7 @@ main {
 
 .project-link-button.secondary:hover {
     background-color: var(--color-accent);
-    color: var(--color-bg);
-    transform: translateY(-2px);
+    color: var(--color-bg) !important;
 }
 
 .project-link-button.disabled {
@@ -668,4 +671,28 @@ main {
     .contact-methods {
         grid-template-columns: 1fr;
     }
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    background-color: #1a1a1a;
+    border: none;
+    margin: 0 var(--space-md) 0 0;
+    box-shadow: none;
+    display: block;
+    float: left;
+    filter: none;
+}
+
+.about-section {
+    margin-top: var(--space-xl); 
+    margin-bottom: var(--space-xl); 
+}
+
+.about-section:first-of-type {
+    margin-top: var(--space-md);
 }
