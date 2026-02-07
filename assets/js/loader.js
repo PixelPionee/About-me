@@ -23,7 +23,11 @@
         return `
             <article class="project-card">
                 <div class="project-image">
-                    <img src="${project.thumbnail}" alt="${project.title}" loading="lazy">
+                    <img src="${project.thumbnail}" 
+                         alt="Preview do projeto ${project.title}" 
+                         loading="lazy"
+                         width="400"
+                         height="250">
                 </div>
                 <div class="project-content">
                     <div class="project-meta">
@@ -38,7 +42,7 @@
                             `<span class="tech-tag">${tech}</span>`
                         ).join('')}
                     </div>
-                    <a href="project-pages/${project.id}.html" class="project-link" aria-label="Ver case study de ${project.title}">
+                    <a href="project-pages/${project.id}.html" class="project-link" aria-label="Ver detalhes completos do projeto ${project.title}">
                         Ver Case Study →
                     </a>
                 </div>
