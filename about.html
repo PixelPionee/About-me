@@ -15,10 +15,10 @@
 <body>
     <header class="site-header" role="banner">
         <nav class="main-nav" role="navigation" aria-label="Navegação principal">
-            <a href="index.html" class="logo" aria-label="Página inicial">CF</a>
+            <a href="index.html" class="logo" aria-label="Voltar para a página inicial - Caio Finisguerra">CF</a>
             <ul class="nav-links">
                 <li><a href="projects.html">Projetos</a></li>
-                <li><a href="about.html">Sobre</a></li>
+                <li><a href="about.html" aria-current="page">Sobre</a></li>
                 <li><a href="philosophy.html">Processo</a></li>
                 <li><a href="contact.html">Contato</a></li>
             </ul>
@@ -30,11 +30,21 @@
             <div class="container">
                 <section class="about-intro" aria-labelledby="about-title">
                     <h1 id="about-title" class="page-title">Sobre</h1>
-                    <img src="assets/images/profile_pic/me.jpg" alt="foto de caio finisguerra" class="profile-photo">
-                    <p class="lead">
-                        Desenvolvedor Front-End em início de carreira, com foco em performance web, 
-                        arquitetura front-end e experiência do usuário (UX).
-                    </p>
+                    <div class="about-intro-grid">
+                        <div class="about-photo-wrapper">
+                            <img src="assets/images/profile_pic/me.jpg" 
+                                 alt="Caio Finisguerra - Desenvolvedor Front-End" 
+                                 class="profile-photo"
+                                 width="150"
+                                 height="150">
+                        </div>
+                        <div class="about-text">
+                            <p class="lead">
+                                Desenvolvedor Front-End em início de carreira, com foco em performance web, 
+                                arquitetura front-end e experiência do usuário (UX).
+                            </p>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="about-section" aria-labelledby="background-title">
