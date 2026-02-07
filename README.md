@@ -98,7 +98,6 @@ Demonstrar domínio absoluto dos fundamentos da web antes de depender de framewo
 2. **Manual de Campo do Caçador**
    - Arquitetura & Conteúdo
    - Next.js + SSG
-   - Em desenvolvimento
 
 ### Seções do Site
 
@@ -127,67 +126,12 @@ Demonstrar domínio absoluto dos fundamentos da web antes de depender de framewo
    - Processo de trabalho explícito
    - Aprendizados compartilhados
 
-## 🛠️ Como Executar
-
-### Desenvolvimento Local
-
-1. Clone o repositório
-```bash
-git clone [url-do-repositorio]
-cd about-me
-```
-
-2. Abra com Live Server (VSCode) ou qualquer servidor local
-```bash
-# Opção 1: Python
-python -m http.server 8000
-
-# Opção 2: Node.js (http-server)
-npx http-server
-
-# Opção 3: PHP
-php -S localhost:8000
-```
-
-3. Acesse `http://localhost:8000`
-
 ### Estrutura de Desenvolvimento
 
 - Edite HTML diretamente nos arquivos `.html`
 - CSS será organizado em módulos separados
 - JavaScript em arquivos modulares
 - Dados em `assets/data/projects.json`
-
-## 📦 Próximos Passos
-
-### Fase 1: Estrutura ✅
-- [x] Criar estrutura de arquivos
-- [x] HTML semântico de todas as páginas
-- [x] JavaScript para carregamento de projetos
-- [x] Dados em JSON
-
-### Fase 2: Estilização (Próximo)
-- [ ] CSS Global (reset, variáveis)
-- [ ] Tipografia
-- [ ] Layout (grid, header, footer)
-- [ ] Componentes (cards, botões)
-- [ ] Responsividade
-
-### Fase 3: Refinamento
-- [ ] Adicionar imagens dos projetos
-- [ ] Otimizar performance
-- [ ] Testes de acessibilidade
-- [ ] Validação HTML/CSS
-
-### Fase 4: Deploy
-- [ ] Minificar CSS/JS
-- [ ] Otimizar imagens
-- [ ] Deploy (GitHub Pages, Vercel ou Netlify)
-- [ ] Configurar domínio customizado
-
-## 📄 Licença
-
-Código e design próprios © 2024 Caio Finisguerra
 
 ## 📧 Contato
 
@@ -199,3 +143,4 @@ Código e design próprios © 2024 Caio Finisguerra
 ---
 
 **Nota:** Este portfólio foi construído com foco em demonstrar domínio dos fundamentos web. Cada decisão técnica é intencional e documentada.
+
