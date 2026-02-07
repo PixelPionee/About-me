@@ -680,9 +680,9 @@ main {
     object-fit: cover;
     object-position: center top;
     background-color: #1a1a1a;
-    border: none;
+    border: none !important;
     margin: 0 var(--space-md) 0 0;
-    box-shadow: none;
+    box-shadow: none !important;
     display: block;
     float: left;
     filter: none;
